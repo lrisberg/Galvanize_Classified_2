@@ -1,15 +1,22 @@
 'use strict';
 
 const express = require('express');
+const path = require('path')
 const app = express();
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '/../', 'client')))
+app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 const classifieds = require('./routes/classifieds');
 app.use('/classifieds', classifieds);
+
+app.use('*', function(req, res, next) {
+  res.sendFile('index.html', {root: path.join(__dirname, '/../', 'client')})
+})
 
 const port = process.env.PORT || 3000;
 
