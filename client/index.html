@@ -6,11 +6,14 @@
   <title>Classifieds</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+  <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
   <script src="javascripts/app.js"></script>
+  <script type="text/javascript" src="/javascripts/app.config.js"></script>
+  <base href="/">
 </head>
 
 <body>
-  <classifieds-main></classifieds-main>
+  <ui-view></ui-view>
 </body>
 
 </html>
