@@ -5,8 +5,8 @@ process.env.NODE_ENV = 'test';
 
 const { suite, test } = require('mocha');
 const request = require('supertest');
-const knex = require('../server/knex');
-const server = require('../server/server');
+const knex = require('../knex');
+const server = require('../server');
 
 suite('Part 3: CRUD routes for classifieds resource should be created.', () => {
 

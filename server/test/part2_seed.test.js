@@ -6,7 +6,7 @@ process.env.NODE_ENV = 'test';
 
 const assert = require('chai').assert;
 const { suite, test } = require('mocha');
-const knex = require('../server/knex');
+const knex = require('../knex');
 
 suite('Part 2: Seed data for classifieds should be created.', () => {
   before((done) => {
