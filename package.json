@@ -1,10 +1,10 @@
 {
     "name": "galvanize-classified-ad",
     "version": "1.0.0",
-    "main": "server.js",
+    "main": "server/server.js",
     "license": "MIT",
     "scripts": {
-        "start": "node server.js",
+        "start": "node server/server.js",
         "knex": "knex",
         "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
         "nodemon": "node server.js",
