@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 
-const classifieds = require('./server/routes/classifieds');
+const classifieds = require('./routes/classifieds');
 app.use('/classifieds', classifieds);
 
 const port = process.env.PORT || 3000;
