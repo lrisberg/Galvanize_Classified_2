@@ -5,7 +5,16 @@ module.exports = {
     "client": 'pg',
     "connection": 'postgres://localhost/classifieds_dev'
   },
-  "test": 'postgres://localhost/classifieds_test',
+  "test": {
+    "client": 'pg',
+    "connection": 'postgres://localhost/classifieds_test',
+    "migrations": {
+      "directory": "./server/migrations"
+    },
+    "seeds": {
+      "directory": "./server/seeds"
+    }
+  },
 
   "production": {
     "client": 'pg',
