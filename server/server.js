@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../', 'client')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
-const classifieds = require('./routes/classifieds');
-app.use('/api/classifieds', classifieds);
+const cl = require('./routes/cl');
+app.use('/api/cl', cl);
 
 const port = process.env.PORT || 3000;
 

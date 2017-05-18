@@ -2,21 +2,21 @@
 
   angular
     .module('app')
-    .component('classifiedsNav', {
-      controller: 'classifiedsNavController',
+    .component('clNav', {
+      controller: 'clNavController',
       controllerAs: '$ctrl',
-      templateUrl: '/views/classifiedsNav.html'
+      templateUrl: '/views/clNav.html'
     })
 
-    .component('classifiedsMain', {
-      controller: 'classifiedsMainController',
+    .component('clMain', {
+      controller: 'clMainController',
       controllerAs: '$ctrl',
-      templateUrl: '/views/classifiedsMain.html'
+      templateUrl: '/views/clMain.html'
     })
 
-    .component('classifiedsClassified', {
-      controller: 'classifiedsClassifiedController',
+    .component('clAd', {
+      controller: 'clAdController',
       controllerAs: '$ctrl',
-      templateUrl: '/views/classifiedsClassified.html'
+      templateUrl: '/views/clAd.html'
     })
 })();

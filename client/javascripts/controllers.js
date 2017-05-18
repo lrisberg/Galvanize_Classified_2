@@ -2,30 +2,30 @@
 
   angular
     .module('app')
-    .controller('classifiedsNavController', classifiedsNavController)
-    .controller('classifiedsMainController',
-  classifiedsMainController)
-    .controller('classifiedsClassifiedController', classifiedsClassifiedController)
+    .controller('clNavController', clNavController)
+    .controller('clMainController',
+  clMainController)
+    .controller('clAdController', clAdController)
 
-    function classifiedsNavController() {
+    function clNavController() {
       const vm = this;
 
       vm.greeting = 'hello';
     };
 
-    function classifiedsMainController(ClassifiedsService) {
+    function clMainController(clService) {
       const vm = this;
 
       vm.$onInit = function() {
-        ClassifiedsService.getClassifieds().then(function(response) {
-          vm.classifieds = response;
+        clService.getcl().then(function(response) {
+          vm.ads = response;
         })
       }
     }
 
-    classifiedsMainController.$inject = ['ClassifiedsService'];
+    clMainController.$inject = ['clService'];
 
-    function classifiedsClassifiedController() {
+    function clAdController() {
       const vm = this;
     }
 

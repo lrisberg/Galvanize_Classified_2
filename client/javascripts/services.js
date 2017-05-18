@@ -2,17 +2,17 @@
 
   angular
     .module('app')
-    .service('ClassifiedsService', ClassifiedsService)
+    .service('clService', clService)
 
-    function ClassifiedsService($http) {
+    function clService($http) {
       const BASE_URL = '/api/classifieds'
 
-      this.getClassifieds = function() {
+      this.getcl = function() {
         return $http.get(BASE_URL).then((response) => {
           return response.data;
         });
       };
     }
 
-    ClassifiedsService.$inject = ["$http"];
+    clService.$inject = ["$http"];
 })();
