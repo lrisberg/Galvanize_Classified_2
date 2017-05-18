@@ -15,6 +15,9 @@
     })
 
     .component('clAd', {
+      bindings: {
+        'ad': '='
+      },
       controller: 'clAdController',
       controllerAs: '$ctrl',
       templateUrl: '/views/clAd.html'

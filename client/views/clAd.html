@@ -3,24 +3,22 @@
 
     <div class="well">
       <div class="media-left">
-        <img class="media-object">
+        <img class="media-object" ng-src="{{$ctrl.ad.item_image}}" width=200px height=200px>
       </div>
       <div class="media-body">
         <h4 class="media-heading">
-          Some Text
+          {{$ctrl.ad.title}}
           |
-          <a><i class="glyphicon glyphicon-arrow-up"></i></a>
-          <a><i class="glyphicon glyphicon-arrow-down"></i></a>
-          10
+          {{$ctrl.ad.price}}
         </h4>
         <div class="text-right">
           Some Author
         </div>
         <p>
-          Some text
+          {{$ctrl.ad.description}}
         </p>
         <div>
-          Some time ago
+          {{$ctrl.post.created_at.fromNow()}}
           |
           <i class="glyphicon glyphicon-comment"></i>
           <a>
