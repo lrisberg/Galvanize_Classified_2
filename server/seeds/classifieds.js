@@ -1,9 +1,9 @@
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('cl').del()
+  return knex('classifieds').del()
     .then(function() {
       // Inserts seed entries
-      return knex('cl').insert(
+      return knex('classifieds').insert(
         [{
           id: 1,
           title: 'NES Classic',
@@ -24,6 +24,6 @@ exports.seed = function(knex, Promise) {
       );
     })
     .then(() => {
-      return knex.raw("SELECT setval('cl_id_seq', (SELECT MAX(id) FROM cl));")
+      return knex.raw("SELECT setval('classifieds_id_seq', (SELECT MAX(id) FROM classifieds));")
     });
 };

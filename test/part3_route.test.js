@@ -33,7 +33,7 @@ suite('Part 3: CRUD routes for classifieds resource should be created.', () => {
   test('GET /classifieds should return the id,title, description, price and item_image of all classifieds.', (done) => {
     /* eslint-disable max-len */
     request(server)
-      .get('/classifieds')
+      .get('/api/classifieds')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, [{
@@ -56,7 +56,7 @@ suite('Part 3: CRUD routes for classifieds resource should be created.', () => {
   test('GET /classifieds/:id should return the id,title, description, price and item_image of a single ad.', (done) => {
     /* eslint-disable max-len */
     request(server)
-      .get('/classifieds/1')
+      .get('/api/classifieds/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, {
@@ -73,7 +73,7 @@ suite('Part 3: CRUD routes for classifieds resource should be created.', () => {
   test('POST /classifieds should create a new ad and return the id, title, description, price and item_image that were created.', (done) => {
   /* eslint-disable max-len */
   request(server)
-    .post('/classifieds')
+    .post('/api/classifieds')
     .set('Accept', 'application/json')
     .send({
           title:'Teddi\'s iPhone',
@@ -100,7 +100,7 @@ suite('Part 3: CRUD routes for classifieds resource should be created.', () => {
   test('PATCH /classifieds/:id should update an ad and return the id, title, description, price and item_image that were updated.', (done) => {
   /* eslint-disable max-len */
   request(server)
-    .patch('/classifieds/1')
+    .patch('/api/classifieds/1')
     .set('Accept', 'application/json')
     .send({
           id:1,
@@ -128,7 +128,7 @@ suite('Part 3: CRUD routes for classifieds resource should be created.', () => {
   test('DELETE /classifieds/:id should delete an ad and return the id,title, description, price, and item_image that were deleted.', (done) => {
     /* eslint-disable max-len */
     request(server)
-      .del('/classifieds/2')
+      .del('/api/classifieds/2')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect((res) => {
