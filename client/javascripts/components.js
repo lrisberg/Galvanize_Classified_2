@@ -46,7 +46,8 @@
     .component('clFilterSort', {
       bindings: {
         'sortOption': '=',
-        'sortOptions': '='
+        'sortOptions': '=',
+        'filter': '='
       },
       controller: 'clFilterSortController',
       controllerAs: '$ctrl',
