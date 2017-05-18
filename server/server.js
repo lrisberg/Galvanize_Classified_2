@@ -14,6 +14,10 @@ app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 const classifieds = require('./routes/classifieds');
 app.use('/api/classifieds', classifieds);
 
+app.use('*', function(req, res, next) {
+  res.sendFile('index.html', {root: path.join(__dirname, '/../', 'client')})
+})
+
 const port = process.env.PORT || 3000;
 
 // catch 404 and forward to error handler
