@@ -4,7 +4,7 @@
     <p><a class="btn btn-info" ng-click="$ctrl.toggleForm()">New Ad</a></p>
   </div>
 
-  <cl-new-ad-form ng-if="$ctrl.showForm"></cl-new-ad-form>
+  <cl-new-ad-form ng-if="$ctrl.showForm" ads="$ctrl.ads" show-form="$ctrl.showForm"></cl-new-ad-form>
 
 <cl-ad ng-repeat="ad in $ctrl.ads" ad="ad"></cl-ad>
 

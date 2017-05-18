@@ -24,6 +24,10 @@
     })
 
     .component('clNewAdForm', {
+      bindings: {
+        'ads': '=',
+        'showForm': '='
+      },
       controller: 'clNewAdFormController',
       controllerAs: '$ctrl',
       templateUrl: '/views/clNewAdForm.html'

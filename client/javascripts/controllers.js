@@ -34,9 +34,21 @@
       const vm = this;
     }
 
-    function clNewAdFormController() {
+    function clNewAdFormController(clService) {
       const vm = this;
+
+      vm.createAd = function() {
+        console.log(vm.newAd);
+        clService.createAd(vm.newAd).then((response) => {
+          console.log(response);
+          vm.ads.push(response);
+          delete vm.newAd;
+          vm.showForm = false;
+        })
+      }
     }
+
+    clNewAdFormController.$inject = ['clService'];
 
 
 
