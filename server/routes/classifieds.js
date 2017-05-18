@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
   knex('classifieds')
-    .select(['id', 'title', 'description', 'price', 'item_image'])
+    .select(['id', 'title', 'description', 'price', 'item_image', 'created_at'])
     .then((classifieds) => {
       res.send(classifieds);
     });
