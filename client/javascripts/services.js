@@ -16,6 +16,12 @@
         });
       };
 
+      this.getAd = function(adId) {
+        return $http.get(`${BASE_URL}/${adId}`).then((response) => {
+          return response.data;
+        })
+      }
+
       this.createAd = function(newAd) {
         return $http.post(BASE_URL, newAd).then((response) => {
           return response.data;

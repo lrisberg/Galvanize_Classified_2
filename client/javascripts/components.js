@@ -33,4 +33,13 @@
       controllerAs: '$ctrl',
       templateUrl: '/views/clNewAdForm.html'
     })
+
+    .component('clEditAd', {
+      bindings: {
+
+      },
+      controller: 'clEditAdController',
+      controllerAs: '$ctrl',
+      templateUrl: '/views/clEditAd.html'
+    })
 })();

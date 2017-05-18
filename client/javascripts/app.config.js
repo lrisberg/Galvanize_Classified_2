@@ -15,6 +15,11 @@
         url: '/',
         component: 'clMain',
       })
+      .state({
+        name: 'edit',
+        url: '/:ad_id/edit',
+        component: 'clEditAd'
+      })
   }
 
 }());

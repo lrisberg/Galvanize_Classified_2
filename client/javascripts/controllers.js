@@ -7,6 +7,7 @@
   clMainController)
     .controller('clAdController', clAdController)
     .controller('clNewAdFormController', clNewAdFormController)
+    .controller('clEditAdController', clEditAdController)
 
     function clNavController() {
       const vm = this;
@@ -60,6 +61,18 @@
 
     clNewAdFormController.$inject = ['clService'];
 
+    function clEditAdController(clService, $stateParams) {
+      const vm = this;
+
+      vm.$onInit = function() {
+        clService.getAd($stateParams.ad_id).then((response) => {
+          console.log(response);
+          vm.editedAd = response;
+        })
+      }
+    }
+
+    clEditAdController.$inject = ['clService', '$stateParams'];
 
 
 })();
