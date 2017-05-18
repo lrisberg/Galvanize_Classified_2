@@ -42,4 +42,14 @@
       controllerAs: '$ctrl',
       templateUrl: '/views/clEditAd.html'
     })
+
+    .component('clFilterSort', {
+      bindings: {
+        'sortOption': '=',
+        'sortOptions': '='
+      },
+      controller: 'clFilterSortController',
+      controllerAs: '$ctrl',
+      templateUrl: '/views/clFilterSort.html'
+    })
 })();

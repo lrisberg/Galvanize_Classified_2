@@ -8,6 +8,7 @@
     .controller('clAdController', clAdController)
     .controller('clNewAdFormController', clNewAdFormController)
     .controller('clEditAdController', clEditAdController)
+    .controller('clFilterSortController', clFilterSortController)
 
     function clNavController() {
       const vm = this;
@@ -27,6 +28,17 @@
       vm.toggleForm = function() {
         vm.showForm = !vm.showForm;
       }
+
+      vm.sortOptions = [{
+        display: 'Price',
+        property: 'price'
+      },
+      {
+        display: 'Date',
+        property: '-created_at'
+      }]
+
+      vm.sortOption = vm.sortOptions[1]
     }
 
     clMainController.$inject = ['clService'];
@@ -37,8 +49,6 @@
       vm.deleteAd = function() {
         clService.deleteAd(vm.ad.id).then((response) => {
           let adId = vm.ad.id;
-          console.log(adId);
-          console.log(vm.ads);
           let adIndex = vm.ads.indexOf(vm.ad);
           vm.ads.splice(adIndex);
         })
@@ -79,5 +89,8 @@
 
     clEditAdController.$inject = ['clService', '$stateParams', '$state'];
 
+    function clFilterSortController() {
+      const vm = this;
+    }
 
 })();
