@@ -8,11 +8,15 @@
       templateUrl: '/views/classifiedsNav.html'
     })
 
-    .component('classifiedsIndex', {
-      controller: function() {
-        
-      },
+    .component('classifiedsMain', {
+      controller: 'classifiedsMainController',
       controllerAs: '$ctrl',
-      template: 'main page'
+      templateUrl: '/views/classifiedsMain.html'
+    })
+
+    .component('classifiedsAd', {
+      controller: 'classifiedsAdController',
+      controllerAs: '$ctrl',
+      templateUrl: '/views/classifiedsAd.html'
     })
 })();

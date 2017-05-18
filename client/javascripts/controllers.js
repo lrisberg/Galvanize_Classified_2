@@ -1,10 +1,11 @@
 (function() {
-  
+
   angular
     .module('app')
     .controller('classifiedsNavController', classifiedsNavController)
-    .controller('classifiedsIndexController',
-  classifiedsIndexController)
+    .controller('classifiedsMainController',
+  classifiedsMainController)
+    .controller('classifiedsAdController', classifiedsAdController)
 
     function classifiedsNavController() {
       const vm = this;
@@ -12,7 +13,11 @@
       vm.greeting = 'hello';
     };
 
-    function classifiedsIndexController() {
+    function classifiedsMainController() {
+
+    }
+
+    function classifiedsAdController() {
 
     }
 })();
