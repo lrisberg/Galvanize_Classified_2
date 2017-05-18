@@ -23,7 +23,9 @@
         })
       }
 
-      vm.showForm = true;
+      vm.toggleForm = function() {
+        vm.showForm = !vm.showForm;
+      }
     }
 
     clMainController.$inject = ['clService'];
