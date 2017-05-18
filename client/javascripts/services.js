@@ -34,6 +34,12 @@
         });
       };
 
+      this.updateAd = function(ad) {
+        return $http.patch(`${BASE_URL}/${ad.id}`, ad).then((response) => {
+          return response.data;
+        })
+      }
+
     }
 
 

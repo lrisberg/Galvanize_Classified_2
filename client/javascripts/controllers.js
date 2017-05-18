@@ -61,18 +61,23 @@
 
     clNewAdFormController.$inject = ['clService'];
 
-    function clEditAdController(clService, $stateParams) {
+    function clEditAdController(clService, $stateParams, $state) {
       const vm = this;
 
       vm.$onInit = function() {
         clService.getAd($stateParams.ad_id).then((response) => {
-          console.log(response);
           vm.editedAd = response;
         })
       }
+
+      vm.updateAd = function() {
+        clService.updateAd(vm.editedAd).then((response) => {
+          $state.go('home');
+        });
+      };
     }
 
-    clEditAdController.$inject = ['clService', '$stateParams'];
+    clEditAdController.$inject = ['clService', '$stateParams', '$state'];
 
 
 })();
