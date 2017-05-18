@@ -13,7 +13,7 @@
       .state({
         name: 'home',
         url: '/',
-        component: 'classifiedsMain',
+        component: 'classifiedsIndex',
       })
   }
 
