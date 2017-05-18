@@ -11,7 +11,6 @@
         response.data.forEach((ad) => {
           ad.created_at = moment(ad.created_at);
         });
-
         return response.data;
       });
     };
