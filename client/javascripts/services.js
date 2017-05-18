@@ -21,7 +21,13 @@
           return response.data;
         });
       };
-      
+
+      this.deleteAd = function(adId) {
+        return $http.delete(`${BASE_URL}/${adId}`, adId).then((response) => {
+          return response.data;
+        });
+      };
+
     }
 
 

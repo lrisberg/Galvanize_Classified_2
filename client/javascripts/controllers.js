@@ -30,17 +30,27 @@
 
     clMainController.$inject = ['clService'];
 
-    function clAdController() {
+    function clAdController(clService, $state) {
       const vm = this;
+
+      vm.deleteAd = function() {
+        clService.deleteAd(vm.ad.id).then((response) => {
+          let adId = vm.ad.id;
+          console.log(adId);
+          console.log(vm.ads);
+          let adIndex = vm.ads.indexOf(vm.ad);
+          vm.ads.splice(adIndex);
+        })
+      }
     }
+
+    clAdController.$inject = ['clService', '$state'];
 
     function clNewAdFormController(clService) {
       const vm = this;
 
       vm.createAd = function() {
-        console.log(vm.newAd);
         clService.createAd(vm.newAd).then((response) => {
-          console.log(response);
           vm.ads.push(response);
           delete vm.newAd;
           vm.showForm = false;

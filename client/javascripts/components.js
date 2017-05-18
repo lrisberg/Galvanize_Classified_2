@@ -16,7 +16,8 @@
 
     .component('clAd', {
       bindings: {
-        'ad': '='
+        'ad': '=',
+        'ads': '='
       },
       controller: 'clAdController',
       controllerAs: '$ctrl',

@@ -4,12 +4,14 @@
     <div class="well">
       <div class="media-left">
         <img class="media-object" ng-src="{{$ctrl.ad.item_image}}" width=200px height=200px>
+        <a href="#" ng-click="$ctrl.editAd()">edit</a>
+        <a href="#" ng-click="$ctrl.deleteAd()">delete</a>
       </div>
       <div class="media-body">
         <h4 class="media-heading">
           {{$ctrl.ad.title}}
           |
-          {{$ctrl.ad.price}}
+          ${{$ctrl.ad.price}}
         </h4>
         <div class="text-right">
           Some Author
