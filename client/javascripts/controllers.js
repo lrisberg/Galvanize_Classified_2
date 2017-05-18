@@ -30,12 +30,20 @@
       }
 
       vm.sortOptions = [{
-        display: 'Price',
+        display: 'Price (Lowest to Highest)',
         property: 'price'
       },
       {
-        display: 'Date',
+        display: 'Price (Highest to Lowest)',
+        property: '-price'
+      },
+      {
+        display: 'Newest',
         property: '-created_at'
+      },
+      {
+        display: 'Oldest',
+        property: 'created_at'
       }]
 
       vm.sortOption = vm.sortOptions[1]
