@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '/../', 'client')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 const classifieds = require('./routes/classifieds');
-app.use('/classifieds', classifieds);
+app.use('/api/classifieds', classifieds);
 
 const port = process.env.PORT || 3000;
 

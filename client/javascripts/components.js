@@ -14,9 +14,9 @@
       templateUrl: '/views/classifiedsMain.html'
     })
 
-    .component('classifiedsAd', {
-      controller: 'classifiedsAdController',
+    .component('classifiedsClassified', {
+      controller: 'classifiedsClassifiedController',
       controllerAs: '$ctrl',
-      templateUrl: '/views/classifiedsAd.html'
+      templateUrl: '/views/classifiedsClassified.html'
     })
 })();
