@@ -22,4 +22,10 @@
       controllerAs: '$ctrl',
       templateUrl: '/views/clAd.html'
     })
+
+    .component('clNewAdForm', {
+      controller: 'clNewAdFormController',
+      controllerAs: '$ctrl',
+      templateUrl: '/views/clNewAdForm.html'
+    })
 })();

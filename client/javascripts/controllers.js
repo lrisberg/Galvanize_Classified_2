@@ -6,6 +6,7 @@
     .controller('clMainController',
   clMainController)
     .controller('clAdController', clAdController)
+    .controller('clNewAdFormController', clNewAdFormController)
 
     function clNavController() {
       const vm = this;
@@ -21,13 +22,18 @@
           vm.ads = response;
         })
       }
+
+      vm.showForm = true;
     }
 
     clMainController.$inject = ['clService'];
 
     function clAdController() {
       const vm = this;
+    }
 
+    function clNewAdFormController() {
+      const vm = this;
     }
 
 
